@@ -13,35 +13,9 @@
 #-runtrace: true
 #-runjdb: 8000
 
+-include: ~base.bndrun
+
 -tester: biz.aQute.tester.junit-platform
-
--runfw: org.eclipse.osgi
-
--runproperties: \
-	logback.configurationFile=file:${.}/logback.xml,\
-	org.osgi.service.http.port=8080,\
-	osgi.console=
-
--resolve.effective: resolve, active
-
--runpath: \
-	ch.qos.logback.classic,\
-	ch.qos.logback.core,\
-	org.apache.felix.logback,\
-	org.apache.geronimo.specs.geronimo-annotation_1.3_spec,\
-	slf4j.api
-
--runsystempackages: \
-	org.slf4j;version=${slf4j.version},\
-	org.slf4j.event;version=${slf4j.version},\
-	org.slf4j.helpers;version=${slf4j.version},\
-	org.slf4j.spi;version=${slf4j.version},\
-	sun.invoke,\
-	sun.misc
-
--runstartlevel: \
-	order=sortbynameversion,\
-	begin=-1
 
 -runrequires: \
 	bnd.identity;id='${project.artifactId}-tests',\
@@ -51,8 +25,6 @@
 -runblacklist: \
 	osgi.identity;filter:='(osgi.identity=*weld*)'
 #	osgi.identity;filter:='(osgi.identity=*openwebbeans*)'
-
--runsystemcapabilities: osgi.contract;osgi.contract="JavaAnnotation";version:Version="1.3.0"
 
 -runbundles: \
 	assertj-core;version='[3.20.2,3.20.3)',\
