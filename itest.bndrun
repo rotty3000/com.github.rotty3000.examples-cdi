@@ -28,8 +28,8 @@
 
 -runbundles: \
 	assertj-core;version='[3.20.2,3.20.3)',\
-	com.github.rotty3000.cdi-example-owb;version='[1.0.0,1.0.1)',\
-	com.github.rotty3000.cdi-example-owb-tests;version='[1.0.0,1.0.1)',\
+	com.github.rotty3000.example.cdi;version='[1.0.0,1.0.1)',\
+	com.github.rotty3000.example.cdi-tests;version='[1.0.0,1.0.1)',\
 	junit-jupiter-api;version='[5.8.2,5.8.3)',\
 	junit-jupiter-engine;version='[5.8.2,5.8.3)',\
 	junit-jupiter-params;version='[5.8.2,5.8.3)',\

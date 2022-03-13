@@ -15,12 +15,16 @@
 
 -include: ~base.bndrun
 
+-jpms-module-info: \
+	${project.artifactId};\
+		version=${project.version}
+
 -runblacklist: \
 	osgi.identity;filter:='(osgi.identity=*weld*)'
 #	osgi.identity;filter:='(osgi.identity=*openwebbeans*)'
 
 -runbundles: \
-	com.github.rotty3000.cdi-example-owb;version='[1.0.0,1.0.1)',\
+	com.github.rotty3000.example.cdi;version='[1.0.0,1.0.1)',\
 	openwebbeans-impl;version='[2.0.25,2.0.26)',\
 	openwebbeans-spi;version='[2.0.25,2.0.26)',\
 	org.apache.aries.cdi.extender;version='[1.1.5,1.1.6)',\
